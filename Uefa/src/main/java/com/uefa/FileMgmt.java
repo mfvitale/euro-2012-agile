@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.StringTokenizer;
@@ -115,6 +117,28 @@ public class FileMgmt
 		}
 		
 		
+	}
+	
+	public ArrayList<Partita> getCalendario()  {
+		Calendario cal = new Calendario(groups);
+		
+		GregorianCalendar day = new GregorianCalendar();
+		
+		ArrayList<Partita> partite = cal.getPartite("A", day);
+		
+		day = (GregorianCalendar) day.clone();
+		day.add(Calendar.DAY_OF_MONTH, 2);
+		partite.addAll(cal.getPartite("B", day));
+		
+		day = (GregorianCalendar) day.clone();
+		day.add(Calendar.DAY_OF_MONTH, 2);
+		partite.addAll(cal.getPartite("C", day));
+				
+		day = (GregorianCalendar) day.clone();
+		day.add(Calendar.DAY_OF_MONTH, 2);
+		partite.addAll(cal.getPartite("D", day));
+		
+		return partite;
 	}
 
 
