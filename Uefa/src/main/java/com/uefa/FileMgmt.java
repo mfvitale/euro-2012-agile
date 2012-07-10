@@ -23,6 +23,7 @@ public class FileMgmt
 			groupLetter.put(2, "B");
 			groupLetter.put(3, "C");
 			groupLetter.put(4, "D");
+			
 	}
 	 
 	public FileMgmt(String filename) {
