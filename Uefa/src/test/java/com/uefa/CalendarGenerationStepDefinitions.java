@@ -23,6 +23,8 @@ public class CalendarGenerationStepDefinitions {
 		gp.the_button_is_clicked("Genera");
 		gp.the_system_show_four_section_of_four_team();
 		
+		
+		
 	}
 
 	@When("^the Genera Calendario is clicked$")
