@@ -59,6 +59,7 @@ public class Euro2012Gui {
 	private JLabel label_2p;
 	private JLabel label_3p;
 	private JLabel label_4p;
+	private JLabel label;
 
 	/**
 	 * Launch the application.
@@ -89,7 +90,7 @@ public class Euro2012Gui {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 728, 465);
+		frame.setBounds(100, 100, 873, 653);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -202,6 +203,9 @@ public class Euro2012Gui {
 		label_2p.setVisible(false);
 		label_3p.setVisible(false);
 		label_4p.setVisible(false);
+		
+		label = new JLabel("");
+		label.setIcon(new ImageIcon("D:\\Workspace eclipse\\Ericsson\\Uefa\\src\\main\\resources\\logo.jpg"));
 
 		
 		
@@ -240,30 +244,34 @@ public class Euro2012Gui {
 							.addComponent(buttonCalendario, GroupLayout.PREFERRED_SIZE, 145, GroupLayout.PREFERRED_SIZE))
 						.addGroup(groupLayout.createSequentialGroup()
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(list_1p, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+								.addComponent(list_1p, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
 								.addGroup(groupLayout.createSequentialGroup()
-									.addComponent(label_1p, GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+									.addComponent(label_1p, GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
 									.addGap(79)))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addComponent(list_2p, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+								.addComponent(list_2p, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
 								.addGroup(groupLayout.createSequentialGroup()
-									.addComponent(label_2p, GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
+									.addComponent(label_2p, GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
 									.addGap(80)))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addGroup(groupLayout.createSequentialGroup()
-									.addComponent(label_3p, GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+									.addComponent(label_3p, GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
 									.addGap(79))
-								.addComponent(list_3p, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
+								.addComponent(list_3p, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 								.addGroup(groupLayout.createSequentialGroup()
-									.addComponent(label_4p, GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+									.addComponent(label_4p, GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
 									.addGap(79))
-								.addComponent(list_4p, GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
+								.addComponent(list_4p, GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE))
 							.addGap(4)))
 					.addGap(12))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(21)
+					.addComponent(label, GroupLayout.PREFERRED_SIZE, 342, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(494, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -302,7 +310,11 @@ public class Euro2012Gui {
 								.addComponent(list_3p, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE)
 								.addComponent(list_4p, GroupLayout.PREFERRED_SIZE, 127, GroupLayout.PREFERRED_SIZE))
 							.addGap(17)))
-					.addGap(299))
+					.addGap(186))
+				.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+					.addContainerGap(397, Short.MAX_VALUE)
+					.addComponent(label, GroupLayout.PREFERRED_SIZE, 186, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap())
 		);
 		groupLayout.linkSize(SwingConstants.VERTICAL, new Component[] {list_1, list_2, list_3, list_4});
 		groupLayout.linkSize(SwingConstants.HORIZONTAL, new Component[] {list_1, list_2, list_3, list_4});

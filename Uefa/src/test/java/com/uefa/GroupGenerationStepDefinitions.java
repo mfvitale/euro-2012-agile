@@ -15,6 +15,10 @@ import cucumber.runtime.PendingException;
 public class GroupGenerationStepDefinitions {
 	boolean f=false;
 	FileMgmt fm;
+	public FileMgmt getFm() {
+		return fm;
+	}
+
 	@Given("^sixteen team read from a file$")
 	public void sixteen_team_read_from_a_file() {
 		 fm = new FileMgmt("D:\\Workspace eclipse\\Ericsson\\Uefa\\squadre.txt");
@@ -38,4 +42,6 @@ public class GroupGenerationStepDefinitions {
 		else
 	      assertTrue("Squadra dello stesso rank nello stesso girone ",true);
 	}
+	
+	
 }
